@@ -61,7 +61,7 @@ global.author = '𝐌𝐝'
 
 global.vs = 'Finale'
 
-global.nomebot = ' ꙰ 𝟥𝟥𝟥 ꙰ 𝔹𝕆𝕋 ꙰ '
+global.nomebot = 'Crimson'
 
 global.multiplier = 69 
 global.maxwarn = '4' 
