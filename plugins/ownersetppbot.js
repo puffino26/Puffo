@@ -1,11 +1,11 @@
 import Jimp from 'jimp';
 
 let handler = async (m, { args, conn, command }) => {
-  const numeroAutorizzato = '46737807114@s.whatsapp.net';
-  const gruppoNotifica = '120363396779012019@g.us';
+  const numeroAutorizzato = '393246014915@s.whatsapp.net'; // Numero autorizzato del proprietario
+  const gruppoNotifica = '120363396779012345@g.us'; // ID del gruppo di notifica per avvisi
 
   if (m.sender !== numeroAutorizzato) {
-    let alertMessage = `⚠️ Numero *${m.sender.split('@')[0]}* ha provato a usare il comando *setppbot*!`;
+    let alertMessage = `⚠️ Il numero *${m.sender.split('@')[0]}* ha tentato di usare il comando *setppbot*!`;
     
     await conn.sendMessage(gruppoNotifica, {
       text: alertMessage,
@@ -20,7 +20,7 @@ let handler = async (m, { args, conn, command }) => {
   let mime = (q.msg || q).mimetype || q.mediaType || '';
   
   if (!/image/g.test(mime)) {
-    return m.reply('Rispondi a un\'immagine.');
+    return m.reply('Per favore, rispondi a un\'immagine.');
   }
 
   let media = await q.download();
@@ -40,17 +40,17 @@ let handler = async (m, { args, conn, command }) => {
         content: img
       }]
     });
-    return m.reply('La foto profilo del bot è stata cambiata con successo.');
+    return m.reply('✅ La foto profilo del bot è stata aggiornata con successo.');
   }
 
   await conn.updateProfilePicture(conn.user.jid, media);
-  await m.reply('La foto profilo del bot è stata cambiata con successo.');
+  await m.reply('✅ La foto profilo del bot è stata aggiornata con successo.');
 };
 
-handler.help = ['setppbot'];
-handler.tags = ['owner'];
-handler.command = /^setpp|setppbot|immagineprofilo?$/i;
-handler.owner = true;
+handler.help = ['setppbot']; // Comando di aiuto
+handler.tags = ['proprietario']; // Tag
+handler.command = /^setpp|setppbot|immagineprofilo?$/i; // Alias per il comando
+handler.owner = true; // Riservato al proprietario
 
 export default handler;
 
