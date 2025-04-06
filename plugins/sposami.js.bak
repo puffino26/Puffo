@@ -1,15 +1,28 @@
-let toM = a => '@' + a.split('@')[0]
+let toM = a => '@' + a.split('@')[0]; // Funzione per formattare i numeri
 function handler(m, { groupMetadata }) {
-let ps = groupMetadata.participants.map(v => v.id)
-let a = ps.getRandom()
-let b
-do b = ps.getRandom()
-while (b === a)
-m.reply(`*${toM(a)}, Dovresti sposarti 💍 con ${toM(b)}, formate una bella coppia 💓*`, null, {
-mentions: [a, b]
-})}
-handler.help = ['formarpareja']
-handler.tags = ['main', 'fun']
-handler.command = ['sposami','formarparejas']
-handler.group = true
-export default handler
+  if (!groupMetadata || !groupMetadata.participants) {
+    return m.reply('⚠️ Non sono riuscito a ottenere i dati dei partecipanti. Assicurati che il comando venga eseguito in un gruppo.');
+  }
+
+  let ps = groupMetadata.participants.map(v => v.id); // Ottiene la lista dei partecipanti
+  if (ps.length < 2) {
+    return m.reply('⚠️ Non ci sono abbastanza partecipanti nel gruppo per formare una coppia.');
+  }
+
+  let a = ps[Math.floor(Math.random() * ps.length)]; // Seleziona casualmente il primo partecipante
+  let b;
+  do {
+    b = ps[Math.floor(Math.random() * ps.length)]; // Seleziona casualmente il secondo partecipante
+  } while (b === a); // Evita di selezionare lo stesso partecipante
+
+  // Risposta con menzioni
+  m.reply(`*${toM(a)}, dovresti sposarti 💍 con ${toM(b)}, formate una bella coppia 💓*`, null, {
+    mentions: [a, b]
+  });
+}
+
+handler.help = ['formarpareja']; // Comando di aiuto
+handler.tags = ['main', 'fun']; // Tag del comando
+handler.command = ['sposami', 'formarparejas']; // Alias del comando
+handler.group = true; // Specifica che il comando può essere usato solo nei gruppi
+export default handler;
