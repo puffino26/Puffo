@@ -3,22 +3,21 @@ import chalk from 'chalk'
 import fs from 'fs'
 import { fileURLToPath } from 'url'
 
-global.botnumber = ""
-global.confirmCode = ""
+global.botnumber = "393246014915" // Numero del bot
+global.confirmCode = "123456" // Codice di conferma personalizzato
 
 global.owner = [
-    ['393246014915', 'Proprietario', true],
-] //Numero degli owner
+    ['393246014915', 'Maruffino', true], // Numero e nome del proprietario
+] // Numero degli owner
 
 //────────────────────────────
 
-global.mods = ['xxxxxxxxxx'] 
-global.prems = [ '66949618631', 'xxxxxxxxxx']
+global.mods = ['393246014915'] // Mod personalizzati
+global.prems = ['66949618631', '393246014915'] // Utenti premium
 
 //────────────────────────────
 
 global.keysZens = ['c2459db922', '37CC845916', '6fb0eff124']
-// 'fiktod' 'BF39D349845E' '675e34de8a' '0b917b905e6f'
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
 global.keysxteammm = ['29d4b59a4aa687ca', '5LTV57azwaid7dXfz5fzJu', 'cb15ed422c71a2fb', '5bd33b276d41d6b4', 'HIRO', 'kurrxd09', 'ebb6251cc00f9c63']
 global.keysxteam = keysxteammm[Math.floor(keysxteammm.length * Math.random())]
@@ -47,37 +46,36 @@ global.APIKeys = {
   'https://violetics.pw': 'beta',
 }
 
-
 //────────────────────────────
-global.imagen1 = ['./media/333.jpg']
-global.imagen4 = fs.readFileSync('./333.png')
+global.imagen1 = ['./media/Maruffino.jpg'] // Immagine personalizzata
+global.imagen4 = fs.readFileSync('./Maruffino.png') // Logo personalizzato
 //────────────────────────────
 
 // Sticker WM (Nome del pacchetto degli sticker)
-global.packname = ' ꙰ 𝟥𝟥𝟥 ꙰ 𝔹𝕆𝕋 ꙰ '
-global.author = '𝐌𝐝'
+global.packname = ' ꙰ Maruffino ꙰ Bot ꙰ '
+global.author = 'Maruffino'
 
 //────────────────────────────
 
-global.vs = 'Finale'
+global.vs = 'Versione Finale'
 
-global.nomebot = 'Crimson'
+global.nomebot = 'MaruffinoBot'
 
-global.multiplier = 69 
-global.maxwarn = '4' 
+global.multiplier = 10 // Moltiplicatore personalizzato
+global.maxwarn = '3' // Numero massimo di avvertimenti
 //────────────────────────────
 
-global.wm = ' ꙰ 𝟥𝟥𝟥 ꙰ 𝔹𝕆𝕋 ꙰ '
-global.wait = 'ⓘ 𝐂𝐚𝐫𝐢𝐜𝐚𝐦𝐞𝐧𝐭𝐨 ...'
+global.wm = ' ꙰ Maruffino ꙰ Bot ꙰ '
+global.wait = 'ⓘ Caricamento in corso...'
 
 //────────────────────────────
 
 global.flaaa = [
-'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=',
-'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=crafts-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&text=',
-'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=amped-logo&doScale=true&scaleWidth=800&scaleHeight=500&text=',
-'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text=',
-'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text=']
+'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=Maruffino',
+'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=crafts-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&text=Maruffino',
+'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=amped-logo&doScale=true&scaleWidth=800&scaleHeight=500&text=Maruffino',
+'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Maruffino&text=',
+]
 
 //──────────────────────────────────
   
